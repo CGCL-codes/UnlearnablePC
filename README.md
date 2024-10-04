@@ -18,4 +18,4 @@ enabling authorized-only training for unlearnable data. This restoration process
 ## Latest Update
 | Date       | Event    |
 |------------|----------|
-| **2024/09/26** | ECLIPSE is acccepted by ESORICS 2024!  |
+| **2024/09/26** | UnlearnablePC is acccepted by NeurIPS 2024!  |
