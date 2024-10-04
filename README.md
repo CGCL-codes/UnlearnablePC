@@ -3,7 +3,7 @@ The official implementation of our NeurIPS 2024 paper "*[Unlearnable 3D Point Cl
 
 ![NeurIPS 2024](https://img.shields.io/badge/NeurIPS-2024-blue.svg?style=plastic) 
 ![Unlearnable Examples](https://img.shields.io/badge/Unlearnable-Examples-yellow.svg?style=plastic)
-![3D Point Clouds](https://img.shields.io/badge/Point-Clouds-orange.svg?style=plastic)
+![3D Point Clouds](https://img.shields.io/badge/3D-Point-Clouds-orange.svg?style=plastic)
  
 
 
