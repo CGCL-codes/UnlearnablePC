@@ -18,4 +18,5 @@ enabling authorized-only training for unlearnable data. This restoration process
 ## Latest Update
 | Date       | Event    |
 |------------|----------|
+| **2024/10/07** | The paper is available at [UnlearnablePC](https://arxiv.org/pdf/2410.03644)!|
 | **2024/09/26** | UnlearnablePC is acccepted by NeurIPS 2024!  |
