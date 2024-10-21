@@ -18,5 +18,23 @@ enabling authorized-only training for unlearnable data. This restoration process
 ## Latest Update
 | Date       | Event    |
 |------------|----------|
-| **2024/10/07** | The paper is available at [UnlearnablePC](https://arxiv.org/pdf/2410.03644)!|
+| **2024/10/21** | We have released the official implementation of UnlearnablePC!  |
+| **2024/10/07** | The paper (arXiv version) is available at [UnlearnablePC](https://arxiv.org/pdf/2410.03644)!|
 | **2024/09/26** | UnlearnablePC is acccepted by NeurIPS 2024!  |
+
+## Start Running UnlearnablePC
+- **Get code**
+```shell 
+git clone https://github.com/CGCL-codes/UnlearnablePC.git
+```
+
+- **Build environment**
+```shell
+cd UnlearnablePC
+conda create -n UnlearnablePC python=3.9
+conda activate UnlearnablePC
+pip install -r requirements.txt
+```
+
+
+
