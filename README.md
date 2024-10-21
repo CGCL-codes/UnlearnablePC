@@ -36,5 +36,52 @@ conda activate UnlearnablePC
 pip install -r requirements.txt
 ```
 
+- **Download datasets**
+  - Please download ModelNet dataset at: [[ModelNet](https://www.kaggle.com/datasets/chenxaoyu/modelnet-normal-resampled)], ShapeNetPart dataset at: [[ShapeNetPart](https://www.kaggle.com/datasets/mitkir/shapenet)], ScanObjectNN dataset at: [[ScanObjectNN](https://hkust-vgd.github.io/scanobjectnn/)], S3DIS dataset at: [[S3DIS](http://buildingparser.stanford.edu/dataset.html)] (for semantic segmentation task)
+  - Unzip the datasets.zip files in ```UnlearnablePC/clean_data```
+
+
+- **Produce unlearnable 3D point cloud datasets**
+ - Using UMT (k=4) with default settings and parameters (robust unlearnable dataset)
+ ```shell
+ python UnlearnablePC_generation.py --dataset ModelNet10 --mode "['rot', 'scale', 'twist', 'shear']"
+ ```
+ - Using UMT (k=3) with default settings and parameters (robust unlearnable dataset)
+ ```shell
+ python UnlearnablePC_generation.py --dataset ModelNet10 --mode "['rot', 'scale', 'twist']"
+ ```
+ - Using UMT (k=2) with default settings and parameters (fragile to SE(3)-invariance networks)
+ ```shell
+ python UnlearnablePC_generation.py --dataset ModelNet10 --mode "['rot', 'scale']"
+ ```
+
+- **Training on UMT datasets (i.e., unlearnable datasets)**
+```shell
+python train.py --dataset ModelNet10 --target_model pointnet_cls --UMTK 3
+```
+
+- **Training on clean datasets (i.e., raw 3D point cloud datasets)**
+```shell
+python train.py --dataset ModelNet10 --target_model pointnet_cls --clean_train
+```
+
+- **Employing the data restoration scheme to UMT data (for authorized users)**
+```shell
+python reverse_train.py --dataset ModelNet10 --target_model pointnet_cls --mode "['rot', 'scale', 'twist']"
+```
+
+## BibTex
+If you find UnlearnablePC both interesting and helpful, please consider citing us in your research or publications:
+```bibtex
+@inproceedings{wang2024unlearnable,
+  title={Unlearnable 3D Point Clouds: Class-wise Transformation Is All You Need},
+  author={Wang, Xianlong and Li, Minghui and Liu, Wei and Zhang, Hangtao and Hu, Shengshan and Zhang, Yechao and Zhou, Ziqi and Jin, Hai},
+  booktitle={Proceedings of the 38th Annual Conference on Neural Information Processing Systems (NeurIPS'24)},
+  year={2024}
+} 
+```
+
+
+
 
 
